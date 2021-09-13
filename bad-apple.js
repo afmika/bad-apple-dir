@@ -1,3 +1,7 @@
+/**
+ * @author afmika
+ */
+
 const input = require('./bad-apple.json');
 const fs = require('fs');
 const path = require('path');
@@ -15,7 +19,7 @@ function read(image) {
 			str = '';
 			continue;
 		}
-		const color = ' XX'[i32 >> 24];
+		const color = '_XW'[i32 >> 24];
 		const length = i32 & 16777215;
 		for (let i = 0; i < length; i++)
 			str += color;
@@ -62,4 +66,7 @@ async function run() {
 	}
 }
 
-run();
+console.log('--- starting ---');
+setTimeout (async () =>{
+	await run();
+}, 10000)
