@@ -1,6 +1,3 @@
-/**
- * @author afmika
- */
 const input = require('./bad-apple.json');
 const fs = require('fs');
 const path = require('path');
